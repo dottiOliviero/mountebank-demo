@@ -7,6 +7,20 @@ Content-Type: application/json
 GET http://localhost:4545/listings/wrong HTTP/1.1
 Content-Type: application/json
 
+### create a new listing
+POST http://localhost:4545/listings HTTP/1.1
+Content-Type: application/json
+
+{
+    "address": {
+        "street": "Via Milano",
+        "number": 55,
+        "city": "it/torino"
+    },
+    "price": 300000
+}
+
+
 ### Get the list of configured imposters
 
 GET http://localhost:2525/imposters HTTP/1.1

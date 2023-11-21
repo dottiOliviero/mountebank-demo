@@ -52,6 +52,47 @@
                     }
                 }
             ]
+        },
+        {
+            "responses": [
+                {
+                    "is": {
+                        "headers": {
+                            "x-custom": "this-is-from-your-imposter"
+                        },
+                        "statusCode": 201,
+                        "body": {
+                            "id": "60d6f7d5-be32-4d98-b3fe-33341061d39c",
+                            "address": {
+                                "street": "Via Milano",
+                                "number": 55,
+                                "city": "it/torino"
+                            },
+                            "price": 300000
+                        }
+                    }
+                }
+            ],
+            "predicates": [
+                {
+                    "and": [
+                        {
+                            "equals": {
+                                "path": "/listings",
+                                "method": "POST",
+                                "headers": {
+                                    "Content-Type": "application/json"
+                                }
+                            }
+                        },
+                        {
+                            "contains": {
+                                "body": "address"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
     ]
 }
