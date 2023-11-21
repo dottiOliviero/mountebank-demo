@@ -40,3 +40,8 @@ Accept: application/json
 ### Get list of agents, is another imposter
 
 GET http://localhost:4040/sales/agents HTTP/1.1
+
+
+### emulate network issue
+GET http://localhost:4040/sales/agents HTTP/1.1
+test-header : fault-simulation
