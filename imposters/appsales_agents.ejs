@@ -5,6 +5,24 @@
       {
          "responses": [
             {
+               "fault": "CONNECTION_RESET_BY_PEER"
+            }
+         ],
+         "predicates": [
+            {
+               "equals": {
+                  "path": "/sales/agents",
+                  "method": "GET",
+                  "headers": {
+                     "test-header": "fault-simulation"
+                  }
+               }
+            }
+         ]
+      },
+      {
+         "responses": [
+            {
                "is": {
                   "statusCode": 200,
                   "body": [
