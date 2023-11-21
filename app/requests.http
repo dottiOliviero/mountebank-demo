@@ -1,0 +1,18 @@
+### get a list of listings
+GET http://localhost:4545/listings HTTP/1.1
+Content-Type: application/json
+
+### try to get listings, but wrong endpoint
+
+GET http://localhost:4545/listings/wrong HTTP/1.1
+Content-Type: application/json
+
+### Get the list of configured imposters
+
+GET http://localhost:2525/imposters HTTP/1.1
+Accept: application/json
+
+### Get information about the imposter mapped on port 4545
+
+GET http://localhost:2525/imposters/4545 HTTP/1.1
+Accept: application/json

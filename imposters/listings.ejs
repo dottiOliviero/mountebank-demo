@@ -1,0 +1,49 @@
+{
+    "port": 4545,
+    "protocol": "http",
+    "stubs": [
+        {
+            "responses": [
+                {
+                    "is": {
+                        "headers": {
+                            "x-custom": "this-is-from-your-imposter"
+                        },
+                        "statusCode": 200,
+                        "body": [
+                            {
+                                "id": "dfcc9945-9f9c-45c6-a6ea-553d08b92386",
+                                "address": {
+                                    "street": "Via Elia Lombardini",
+                                    "number": 10,
+                                    "city": "it/milano"
+                                },
+                                "price": 60000
+                            },
+                            {
+                                "id": "6dd4ba56-de38-42ca-8d66-fb224f1e038f",
+                                "address": {
+                                    "street": "Via Carlo Urbani",
+                                    "number": 34,
+                                    "city": "it/torino"
+                                },
+                                "price": 80000
+                            }
+                        ]
+                    }
+                }
+            ],
+            "predicates": [
+                {
+                    "equals": {
+                        "path": "/listings",
+                        "method": "GET",
+                        "headers": {
+                            "Content-Type": "application/json"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
