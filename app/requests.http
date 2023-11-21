@@ -3,7 +3,6 @@ GET http://localhost:4545/listings HTTP/1.1
 Content-Type: application/json
 
 ### try to get listings, but wrong endpoint
-
 GET http://localhost:4545/listings/wrong HTTP/1.1
 Content-Type: application/json
 
@@ -36,3 +35,8 @@ Accept: application/json
 
 GET http://localhost:2525/imposters/4545 HTTP/1.1
 Accept: application/json
+
+
+### Get list of agents, is another imposter
+
+GET http://localhost:4040/sales/agents HTTP/1.1
