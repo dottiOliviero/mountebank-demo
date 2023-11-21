@@ -9,4 +9,4 @@ services:
       - "2525:2525"
     volumes:
       - ./imposters:/imposters
-    command: --configfile /imposters/listings.ejs --debug
+    command: --configfile /imposters/imposters.ejs --debug
