@@ -14,6 +14,27 @@
             "responses": [
                 {
                     "is": {
+                        "statusCode": 500,
+                        "body": "MyErrorMessage"
+                    }
+                }
+            ],
+            "predicates": [
+                {
+                    "equals": {
+                        "path": "/listings",
+                        "method": "GET",
+                        "headers": {
+                            "test-header": "this-should-fail-with-response"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "responses": [
+                {
+                    "is": {
                         "headers": {
                             "x-custom": "this-is-from-your-imposter"
                         },
